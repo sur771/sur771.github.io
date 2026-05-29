@@ -1,0 +1,27 @@
+@import "bootstrap-reboot.css";
+@import "reset.css";
+
+body{
+    background-color: black;
+    color: white;    
+}
+h1,h2{
+    color: red;
+    font-family: sans-serif;
+    text-align: right;
+}
+p{
+    
+    font-size: 1.5rem;
+    line-height: 2rem;
+    text-align: right;
+}
+em{
+    color: green;
+}
+.wrapper{
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-inline: 10px;
+}
