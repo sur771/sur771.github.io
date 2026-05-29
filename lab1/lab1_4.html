@@ -12,14 +12,14 @@
 
 		<p>Элемент <code>img</code> внедряет изображение в текущий документ в месте определения элемента. Элемент <code>img</code> не имеет содержимого — он замещается на ходу изображением, указанным в атрибуте <code>src</code>.</p>
 		<figure>
-			<img src="/lab1/images/images/aquaria.jpg" alt="aquaria.jpg">
+			<img src="/lab1/images/aquaria.jpg" alt="aquaria.jpg">
 			<figcaption>Черепаха</figcaption>
 		</figure>
 
 		<h2>Альтернативный текст</h2>
 		<p>Атрибут <code>alt</code> предоставляет краткое описание изображения. Он содержит альтернативный текст, который отображается, если изображение не может быть выведено. Пользовательские агенты должны отображать альтернативный текст, если они не поддерживают изображения, или сконфигурированы так, чтобы не показывать изображения (отключен показ изображений).</p>
         <figure>
-			<p><img src="/lab1/images/images/globus.gif" alt="globus.gif"></p>
+			<p><img src="/lab1/images/globus.gif" alt="globus.gif"></p>
 			<figcaption>Глобус</figcaption>
 		</figure>
 		<h2>Размеры изображения</h2>
@@ -27,10 +27,10 @@
 		Если задан только один из атрибутов, второй размер будет высчитан в соответствие с пропорциями изображения и заданным атрибутом.
 		При указании обоих атрибутов ПА «впишет» изображение в область с указанными размерами.</p>
 		<figure>
-			<img src="/lab1/images/images/html5-logo.png" alt="html5-logo.png">
-			<img src="/lab1/images/images/html5-logo.png" alt="html5-logo.png" width="150" height="150">
-			<img src="/lab1/images/images/html5-logo.png" alt="html5-logo.png" width="175" >
-			<img src="/lab1/images/images/html5-logo.png" alt="html5-logo.png" height="200">
+			<img src="/lab1/images/html5-logo.png" alt="html5-logo.png">
+			<img src="/lab1/images/html5-logo.png" alt="html5-logo.png" width="150" height="150">
+			<img src="/lab1/images/html5-logo.png" alt="html5-logo.png" width="175" >
+			<img src="/lab1/images/html5-logo.png" alt="html5-logo.png" height="200">
 		<figcaption>HTML5 Logo</figcaption>
 		</figure>
 		
@@ -41,10 +41,10 @@
 		Атрибут <code>srcset</code> задаёт путь к графическим файлам с учётом размера изображения и устройств.
 		<figure>
 		<img alt="mushroom.jpg"
-		src="/lab1/images/images/mushroom.jpg"
-		srcset="/lab1/images/images/mushroom_portrait.jpg 300w,
-		/lab1/images/images/mushroom_landscape.jpg 600w,
-		/lab1/images/images/mushroom_retina.jpg 1200w"
+		src="/lab1/images/mushroom.jpg"
+		srcset="/lab1//images/mushroom_portrait.jpg 300w,
+		/lab1/images/mushroom_landscape.jpg 600w,
+		/lab1/images/mushroom_retina.jpg 1200w"
 		sizes="(max-width: 400px) 300px,
 		(max-width: 900px) 600px,
 		900px">
@@ -56,7 +56,7 @@
 		Обычно применяется для иллюстраций, фрагментов кода, схем, графиков, диаграмм и др.
 		Элемент <code>figcaption</code> содержит описание для элемента <code>figure</code>. Он должен быть первым или последним элементом в группе.</p>
 		<figure>
-			<img src="/lab1/images/images/redcat.jpg" 
+			<img src="/lab1/images/redcat.jpg" 
 			alt="redcat.jpg">
 			<figcaption>Рыжий кот</figcaption>
 		</figure>
@@ -70,5 +70,9 @@
 		Затем выбранное изображение отображается в пространстве, занятом элементом <code>img</code>. 
 		</p>
 	</section>
+		<img src="lab1/images/light.avif" 
+		alt="light.avif">
+		<img src="lab1/images/muscle.webp" 
+		alt="muscle">
 </body>
 </html>

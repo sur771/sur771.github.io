@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Глеб Бирюков — Data Analyst | CS2 Path to the Top</title>
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        :root {
+            --bg-dark: #0a0e17;
+            --bg-card: #141b25;
+            --accent-cs: #de9b35; /* Золотой цвет редкости в CS2 */
+            --text-main: #d1d5db;
+            --border-color: #2a3444;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            position: relative;
+        }
+
+        /* Аналитическая сетка на фоне */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: 
+                linear-gradient(rgba(222, 155, 53, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(222, 155, 53, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .navbar {
+            background-color: rgba(10, 14, 23, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .navbar .nav-link {
+            color: var(--text-main);
+            font-weight: 500;
+            margin: 0 10px;
+            position: relative;
+        }
+
+        .navbar .nav-link:hover, .navbar .nav-link.active {
+            color: var(--accent-cs);
+        }
+
+        .section-title {
+            color: var(--accent-cs);
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .main-heading {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(to right, #fff, var(--accent-cs));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.2;
+        }
+
+        .hero-code {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .badge-tech {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-main);
+            font-weight: 500;
+            padding: 10px 18px;
+            margin: 5px;
+            font-size: 0.9rem;
+            transition: 0.2s;
+        }
+        
+        .badge-tech:hover {
+            border-color: var(--accent-cs);
+            color: var(--accent-cs);
+            transform: translateY(-2px);
+        }
+
+        .cs2-card {
+            background: var(--bg-card);
+            border: 1px solid #2a3444;
+            border-top: 3px solid var(--accent-cs);
+            border-radius: 16px;
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cs2-card::after {
+            content: "★ ★ ★";
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            color: var(--accent-cs);
+            font-size: 1.5rem;
+            opacity: 0.6;
+            letter-spacing: -5px;
+        }
+
+        .footer-link {
+            color: #6b7280;
+            font-size: 1.8rem;
+            margin: 0 15px;
+            transition: color 0.2s;
+        }
+
+        .footer-link:hover {
+            color: var(--accent-cs);
+        }
+
+        /* Кнопка-призрак */
+        .btn-ghost {
+            border: 1px solid var(--accent-cs);
+            color: var(--accent-cs);
+            padding: 10px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-ghost:hover {
+            background: var(--accent-cs);
+            color: #000;
+            box-shadow: 0 0 20px rgba(222, 155, 53, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .main-heading {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-white" href="#">{ <span style="color: var(--accent-cs);">Бирюков</span>.dev }</a>
+            <button class="navbar-toggler border-light" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+                <span class="bi bi-list text-white fs-3"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a href="#about" class="nav-link">Обо мне</a></li>
+                    <li class="nav-item"><a href="#project" class="nav-link">Проект</a></li>
+                    <li class="nav-item"><a href="#stack" class="nav-link">Стек</a></li>
+                    <li class="nav-item"><a href="#contacts" class="nav-link">Контакты</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 1. Хиро-секция (Шапка) -->
+    <header class="min-vh-100 d-flex align-items-center" style="padding-top: 76px;">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <div class="section-title">Студент Физмата ОГУ им. Тургенева</div>
+                    <h1 class="main-heading mb-3">Глеб<br>Бирюков</h1>
+                    <p class="lead text-white-50 mb-4">
+                        Data-аналитик в мире CS2. Строю путь к топу через математику и код. 
+                        От анализа демо до прогнозирования винрейта — превращаю хаос игры в стройную систему данных.
+                    </p>
+                    <a href="#project" class="btn-ghost me-3">Мой проект <i class="bi bi-arrow-down-short"></i></a>
+                    <a href="#contacts" class="btn btn-outline-light rounded-pill">Связаться</a>
+                </div>
+                <div class="col-lg-6">
+                    <!-- Декоративный блок кода -->
+                    <div class="hero-code">
+                        <div class="text-secondary mb-2"># Анализ матча CS2</div>
+                        <code>
+                            <span class="text-danger">import</span> pandas <span class="text-danger">as</span> pd<br>
+                            <span class="text-danger">import</span> numpy <span class="text-danger">as</span> np<br><br>
+                            match_data = pd.read_csv(<span class="text-warning">'demo_output.csv'</span>)<br>
+                            win_prob = np.mean(match_data[<span class="text-warning">'round_winner'</span>] == <span class="text-info">'T'</span>)<br>
+                            <span class="text-success">print</span>(<span class="text-warning">f"Шанс победы за террористов: {win_prob:.2%}"</span>)
+                        </code>
+                        <div class="mt-3 text-muted small">>>> Шанс победы за террористов: 47.32%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 2. Обо мне -->
+    <section id="about" class="py-5">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <!-- Временная заглушка для аватара в стиле CS -->
+                    <div class="bg-dark p-5 rounded-4 text-center border" style="border-color: var(--border-color);">
+                        <i class="bi bi-person-badge" style="font-size: 8rem; color: var(--accent-cs); opacity: 0.3;"></i>
+                        <p class="mt-3 text-secondary">Никнейм: <span class="text-white">biryukov_analyst</span></p>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="section-title">// Обо мне</div>
+                    <h2 class="text-white mb-4">Математика — база. CS2 — страсть.</h2>
+                    <p class="fs-5">
+                        Учусь на 2-м курсе Физико-математического института ОГУ имени Тургенева. 
+                        Моя академическая база позволяет смотреть на киберспорт не как на «просто игру», 
+                        а как на сложную систему вероятностей, таймингов и математических моделей.
+                    </p>
+                    <p>
+                        Я разрабатываю инструменты для парсинга и анализа демо-файлов Counter-Strike 2. 
+                        Мой подход — это симбиоз точных наук и реального игрового опыта. 
+                        Верю, что правильная аналитика способна поднять игрока с уровня «просто стреляю» до понимания глубинной стратегии карты.
+                    </p>
+                    <div class="mt-4">
+                        <span class="badge-tech">Python</span>
+                        <span class="badge-tech">Pandas</span>
+                        <span class="badge-tech">NumPy</span>
+                        <span class="badge-tech">SQL</span>
+                        <span class="badge-tech">Matplotlib</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Проект "Path to the Top" -->
+    <section id="project" class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <div class="section-title">// Активный проект</div>
+                <h2 class="text-white">CS2 Path to the Top</h2>
+                <p class="text-secondary w-75 mx-auto">Путь к вершине не терпит случайностей. Каждое решение должно быть подкреплено цифрами.</p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Карточка 1: Анализ -->
+                <div class="col-md-6">
+                    <div class="cs2-card h-100">
+                        <h3 class="text-white"><i class="bi bi-graph-up-arrow text-warning me-2"></i>Performance Analytics</h3>
+                        <p>Детальный разбор твоих игр. Heatmap позиционирования, эффективность использования утилит, клатч-ситуации. Выявляем слабые места в твоей игре, опираясь только на данные.</p>
+                    </div>
+                </div>
+                <!-- Карточка 2: Экономика -->
+                <div class="col-md-6">
+                    <div class="cs2-card h-100">
+                        <h3 class="text-white"><i class="bi bi-cash-coin text-warning me-2"></i>Economy & Force-Buy</h3>
+                        <p>Предиктивная модель экономики команды. Когда стоит закупаться, а когда лучше сделать сейв? Оптимизация расходов для максимального количества раундов с полным закупом.</p>
+                    </div>
+                </div>
+                <!-- Карточка 3: Карты -->
+                <div class="col-md-6">
+                    <div class="cs2-card h-100">
+                        <h3 class="text-white"><i class="bi bi-map text-warning me-2"></i>Map Control</h3>
+                        <p>Сравнение твоих таймингов с тир-1 профессионалами. Анализ контроля пространства на картах Mirage, Inferno, Ancient. Гайды по улучшению Movement по науке.</p>
+                    </div>
+                </div>
+                <!-- Карточка 4: Боты -->
+                <div class="col-md-6">
+                    <div class="cs2-card h-100">
+                        <h3 class="text-white"><i class="bi bi-robot text-warning me-2"></i>Auto-Demo Review</h3>
+                        <p>Инструмент, который автоматически размечает ключевые моменты раунда (entry frags, rotations, mistakes). Экономит часы ручного пересмотра демо.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Стек и Контакты -->
+    <section id="stack" class="py-5 border-top" style="border-color: var(--border-color) !important;">
+        <div class="container py-5 text-center">
+            <div class="section-title">// Инструментарий</div>
+            <h2 class="text-white mb-5">Технологический стек</h2>
+            <div class="d-flex flex-wrap justify-content-center">
+                <span class="badge-tech fs-5"><i class="bi bi-filetype-py me-2"></i>Python 3.12</span>
+                <span class="badge-tech fs-5"><i class="bi bi-database me-2"></i>PostgreSQL</span>
+                <span class="badge-tech fs-5"><i class="bi bi-git me-2"></i>Git/GitHub</span>
+                <span class="badge-tech fs-5"><i class="bi bi-box me-2"></i>Docker</span>
+                <span class="badge-tech fs-5"><i class="bi bi-bar-chart me-2"></i>Seaborn</span>
+                <span class="badge-tech fs-5"><i class="bi bi-bootstrap me-2"></i>Bootstrap 5</span>
+                <span class="badge-tech fs-5"><i class="bi bi-journal-code me-2"></i>Jupyter</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал / Контакты -->
+    <footer id="contacts" class="text-center py-5 bg-dark bg-opacity-25">
+        <div class="container">
+            <h2 class="text-white mb-3">Глеб Бирюков</h2>
+            <p class="text-secondary">Физико-математический институт ОГУ им. Тургенева</p>
+            <p class="text-secondary">Орёл, 2026</p>
+            <div class="my-4">
+                <a href="#" class="footer-link" title="GitHub"><i class="bi bi-github"></i></a>
+                <a href="#" class="footer-link" title="Telegram"><i class="bi bi-telegram"></i></a>
+                <a href="#" class="footer-link" title="Discord"><i class="bi bi-discord"></i></a>
+                <a href="#" class="footer-link" title="Steam"><i class="bi bi-steam"></i></a>
+            </div>
+            <p class="text-muted small mt-4">
+                &copy; 2026 CS2 Path to the Top. Аналитика без компромиссов.
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
