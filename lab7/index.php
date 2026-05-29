@@ -23,7 +23,7 @@
   <div class="container">
     
     <header class="page-header text-center" style="margin-top: 20px;">
-      <h1>Журавлева Полина 
+      <h1>Бирюков Глеб
 <small>Студент 2-го курса. Направление подготовки: "Прикладная информатика: когнитивные технологии".</small></h1>
     </header>
     
@@ -54,7 +54,7 @@
     
     <div id="header-bottom" class="jumbotron text-center" style="background-color: #f5f5f5; border-radius: 6px; padding: 30px 15px;">
       <h2>Привет!</h2>
-      <p class="lead">Меня зовут Полина. Мне 19 лет, я обучаюсь в Орловском государственном университете им. И.С. Тургенева.</p>
+      <p class="lead">Меня зовут Глеб. Мне 20 лет, я обучаюсь в Орловском государственном университете им. И.С. Тургенева.</p>
     </div>
     
     <div id="main">
@@ -64,7 +64,7 @@
         <div class="col-md-4 text-center">
           <div class="well">
             <h3 style="color: #2e6da4;"><i class="fa fa-graduation-cap"></i> Обучение</h3>
-            <p>Студентка 2-го курса бакалавриата в <strong>ОГУ им. И.С. Тургенева</strong>. Получаю актуальные знания в сфере информационных технологий и развиваю инженерное мышление.</p>
+            <p>Студент 2-го курса бакалавриата в <strong>ОГУ им. И.С. Тургенева</strong>. Получаю актуальные знания в сфере информационных технологий и развиваю инженерное мышление.</p>
           </div>
         </div>
 
@@ -137,11 +137,11 @@
   <!-- Подвал сайта -->
   <footer style="background-color: #222; color: #fff; padding: 30px 0; margin-top: 50px;">
     <div class="container text-center">
-      <p>&copy; 2026 Журавлева Полина. Все права защищены.</p>
+      <p>&copy; 2026 Бирюков Глеб. Все права защищены.</p>
       <p>
         <i class="fa fa-envelope"></i> Email: 
-        <a href="mailto:polinazuravleva586@gmail.com" style="color: #5cb85c; text-decoration: none;">
-          polinazuravleva586@gmail.com
+        <a href="mailto:glebaskantrabas@gmail.com" style="color: #5cb85c; text-decoration: none;">
+          glebaskantrabas@gmail.com
         </a>
       </p>
     </div>
